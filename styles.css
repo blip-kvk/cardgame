@@ -1,0 +1,50 @@
+.playButton{
+    background-color: greenyellow;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 150px;;
+}
+.container {
+    justify-content: center;
+    align-items: center;
+}
+.row {
+    width: 100%;
+}
+.row .subBlock {
+    float:left;
+    width:23%;
+    text-align: center;
+    height: 200px;
+    border: 1px solid black;
+    margin-right: 1%;
+    padding: 8px;
+}
+
+.row .subBlock .cardBlock{
+    width: 48%;
+    text-align: left;
+    padding-left: 8px;
+    float: left;
+    height: 50%;
+}
+.row .subBlock .cardDetails {
+    height: 75%;
+}
+.textCenter {
+    text-align: center;
+}
+.playerAndCards {
+    padding-top: 40px;
+}
+.winner {
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 40px;
+}
+.hideDiv {
+    display: none;
+}
+.showDiv {
+    display: block;
+}

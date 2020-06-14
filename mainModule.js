@@ -57,10 +57,10 @@ function dealCardsToPlayers(numOfDeals,numOfPlayers){
     }
     // if(flag){
     // dealedCards = {
-    //     1: [10,12,14,10],
-    //     2: [7,6,3,14],
-    //     3: [3,4,6,2],
-    //     4: [10,12,14,10]
+    //     1: [11,2,10,5],
+    //     2: [9,11,8,12],
+    //     3: [11,12,10,3],
+    //     4: [5,14,2,8]
     // }
     // flag= false;}
     // flag = false;
@@ -111,7 +111,7 @@ function getBestCardType(cardsType){
     cardsType.sort(function(a,b){
         return b.maxType - a.maxType;
     })
-    console.log(cardsType)
+    // console.log(cardsType)
     let maxType = cardsType[0].maxType;
     for(let i=0;i<cardsType.length;i++){
         if(maxType != cardsType[i].maxType){
@@ -162,7 +162,7 @@ function getBestCardType(cardsType){
         if(typeof comp1 === 'number' && typeof comp2 === 'number') {
             let comp3 = compare(cardsType[comp1],cardsType[comp2+2]);
             if(typeof comp3 === 'number'){
-                if(comp3 == comp1){
+                if(comp3 == 0){
                     return declareWinner(cardsType[comp1].playerNumber);
                 }else {
                     return declareWinner(cardsType[comp2+2].playerNumber);
@@ -174,7 +174,7 @@ function getBestCardType(cardsType){
         }else if(typeof comp1 === 'number' && typeof comp2 != 'number'){
             let comp3 = compare(cardsType[comp1],cardsType[2]);
             if(typeof comp3 === 'number'){
-                if(comp3 == comp1){
+                if(comp3 == 0){
                     return declareWinner(cardsType[comp1].playerNumber);
                 }else {
                     playerNumbers = comp2;
